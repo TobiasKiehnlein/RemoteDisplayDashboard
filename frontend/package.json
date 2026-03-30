@@ -1,0 +1,19 @@
+{
+  "name": "remote-display-dashboard-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && rm -f ../custom_components/vue_dashboard/dist/*.css",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "home-assistant-js-websocket": "^9.6.0",
+    "vue": "^3.5.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.0",
+    "vite": "^6.0.0",
+    "vite-plugin-css-injected-by-js": "^4.0.1"
+  }
+}
