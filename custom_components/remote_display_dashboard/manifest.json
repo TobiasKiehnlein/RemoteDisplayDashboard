@@ -3,6 +3,7 @@
   "name": "Remote Display Dashboard",
   "version": "1.0.0",
   "codeowners": [],
+  "config_flow": true,
   "dependencies": ["frontend"],
   "documentation": "https://github.com/tobiaskiehnlein/remotedisplaydashboard",
   "requirements": [],

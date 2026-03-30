@@ -52,15 +52,15 @@ async function main() {
 
   if (HA_URL && HA_TOKEN) {
     try {
-      console.info(`[vue-dashboard] Connecting to HA at ${HA_URL}…`)
+      console.info(`[remote-display-dashboard] Connecting to HA at ${HA_URL}…`)
       hassRef = await buildRealHass()
-      console.info('[vue-dashboard] Connected — using real hass object.')
+      console.info('[remote-display-dashboard] Connected — using real hass object.')
     } catch (err) {
-      console.warn('[vue-dashboard] HA connection failed, using mock:', err)
+      console.warn('[remote-display-dashboard] HA connection failed, using mock:', err)
       hassRef = buildMockHass()
     }
   } else {
-    console.info('[vue-dashboard] No VITE_HA_URL/VITE_HA_TOKEN in .env.local — using mock hass.')
+    console.info('[remote-display-dashboard] No VITE_HA_URL/VITE_HA_TOKEN in .env.local — using mock hass.')
     hassRef = buildMockHass()
   }
 

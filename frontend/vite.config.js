@@ -29,9 +29,9 @@ export default defineConfig(({ command }) => {
         lib: {
           entry: resolve(__dirname, 'src/main.js'),
           formats: ['es'],
-          fileName: () => 'vue-dashboard.js',
+          fileName: () => 'remote-display-dashboard.js',
         },
-        outDir: resolve(__dirname, '../custom_components/vue_dashboard/dist'),
+        outDir: resolve(__dirname, '../custom_components/remote_display_dashboard/dist'),
         emptyOutDir: true,
       },
     }

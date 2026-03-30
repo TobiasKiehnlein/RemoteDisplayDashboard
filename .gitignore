@@ -1,6 +1,6 @@
 frontend/node_modules/
 frontend/.env.local
-custom_components/vue_dashboard/dist/
+custom_components/remote_display_dashboard/dist/
 *.pyc
 __pycache__/
 .DS_Store

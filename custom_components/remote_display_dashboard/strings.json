@@ -1,0 +1,12 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "description": "Add Remote Display Dashboard as a sidebar panel in Home Assistant."
+      }
+    },
+    "abort": {
+      "single_instance_allowed": "Only one instance of Remote Display Dashboard can be configured."
+    }
+  }
+}

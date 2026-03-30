@@ -3,7 +3,7 @@
 import { createApp, ref } from 'vue'
 import App from './App.vue'
 
-class VueDashboardPanel extends HTMLElement {
+class RemoteDisplayPanel extends HTMLElement {
   constructor() {
     super()
     this._hassRef = ref(null)
@@ -31,4 +31,4 @@ class VueDashboardPanel extends HTMLElement {
   }
 }
 
-customElements.define('vue-dashboard-panel', VueDashboardPanel)
+customElements.define('remote-display-panel', RemoteDisplayPanel)

@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "vite",
-    "build": "vite build && rm -f ../custom_components/vue_dashboard/dist/*.css",
+    "build": "vite build && rm -f ../custom_components/remote_display_dashboard/dist/*.css",
     "preview": "vite preview"
   },
   "dependencies": {
