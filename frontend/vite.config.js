@@ -31,7 +31,7 @@ export default defineConfig(({ command }) => {
           formats: ['es'],
           fileName: () => 'remote-display-dashboard.js',
         },
-        outDir: resolve(__dirname, '../custom_components/remote_display_dashboard/dist'),
+        outDir: resolve(__dirname, '../custom_components/remote_display_dashboard/panel'),
         emptyOutDir: true,
       },
     }
