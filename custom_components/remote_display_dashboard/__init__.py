@@ -11,7 +11,7 @@ from homeassistant.core import HomeAssistant
 DOMAIN = "remote_display_dashboard"
 _LOGGER = logging.getLogger(__name__)
 
-_DIST_DIR = Path(__file__).parent / "dist"
+_PANEL_DIR = Path(__file__).parent / "panel"
 _STATIC_URL = "/remote-display-dashboard-static"
 _PANEL_URL = "remote-display-dashboard"
 _PANEL_ELEMENT = "remote-display-panel"
@@ -20,14 +20,15 @@ _JS_FILE = "remote-display-dashboard.js"
 
 async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     """Register the Remote Display Dashboard panel."""
-    if not _DIST_DIR.exists():
+    js_path = _PANEL_DIR / _JS_FILE
+    if not js_path.is_file():
         _LOGGER.error(
-            "Remote Display Dashboard: built files not found at %s.",
-            _DIST_DIR,
+            "Remote Display Dashboard: built JS not found at %s.",
+            js_path,
         )
         return False
 
-    hass.http.register_static_path(_STATIC_URL, str(_DIST_DIR), cache_headers=False)
+    hass.http.register_static_path(_STATIC_URL, str(_PANEL_DIR), cache_headers=False)
 
     async_register_built_in_panel(
         hass,
